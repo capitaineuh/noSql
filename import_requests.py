@@ -2,7 +2,7 @@ import requests
 import pandas as pd
 
 # URL de l'API (remplacez par l'URL réelle de votre API)
-api_url = "https://opendata.brussels.be/api/records/1.0/search/?dataset=bruxelles_arbres_remarquables"
+api_url = "https://opendata.brussels.be/api/records/1.0/search/?dataset=bruxelles_parcours_bd"
 params = {
     "rows": 10,  # Nombre d'enregistrements par page
     "start": 0,  # Indice de départ
@@ -48,8 +48,8 @@ try:
     }, inplace=True)
 
     # Sauvegarder le DataFrame nettoyé et harmonisé dans un fichier CSV
-    df.to_csv('arbres_remarquables_cleaned.csv', index=False)
+    df.to_csv('bruxelles_parcours_bd.csv', index=False)
 
-    print("Données enregistrées dans le fichier CSV 'arbres_remarquables_cleaned.csv'.")
+    print("Données enregistrées dans le fichier CSV 'bruxelles_parcours_bd.csv'.")
 except requests.exceptions.RequestException as e:
     print(f"Erreur lors de l'appel à l'API : {e}")

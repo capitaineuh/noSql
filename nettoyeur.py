@@ -16,14 +16,25 @@ def clean_data(filename):
     return df
 
 # Nettoyer les données
-cleaned_df = clean_data('arbres_remarquables_cleaned.csv')
+cleaned_df = clean_data('bruxelles_parcours_bd.csv')
 
 def harmonize_fields(df):
     # Renommer les colonnes pour assurer une harmonisation
     df.rename(columns={
-        'nom_original_1': 'nom_harmonisé_1',
-        'nom_original_2': 'nom_harmonisé_2',
-        # Ajoutez d'autres colonnes si nécessaire
+        'surface_m2': 'surface_metres_carre',
+        'lien_site_parcours_bd': 'lien_site_francais',
+        'adres': 'adresse_nl',
+        'dessinateur': 'auteur',
+        'commune_gemeente': 'commune',
+        'adresse': 'adresse_fr',
+        'naam_fresco_nl': 'nom_fresque_nl',
+        'date': 'annee_creation',
+        'nom_de_la_fresque': 'nom_fresque_fr',
+        'realisateur': 'realisateur',
+        'link_site_striproute': 'lien_site_neerlandais',
+        'image': 'url_image',
+        'maison_d_edition': 'maison_edition',
+        'coordonnees_geographiques': 'coordonnees_geo'
     }, inplace=True)
 
     return df
