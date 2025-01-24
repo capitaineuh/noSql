@@ -1,0 +1,41 @@
+Documentation du Projet : 
+API des Arbres Remarquables de Bruxelles
+
+
+Introduction
+Ce projet consiste en la création d'une API RESTful permettant de récupérer et d'interroger des données sur les arbres remarquables de Bruxelles. 
+Les données sont stockées dans une base de données MongoDB, et l'API est développée avec Flask.
+
+
+Etape a suivre:
+
+    Cloner le Dépôt :
+        git clone https://github.com/capitaineuh/noSql
+        
+    Installer les Dépendances :
+        - pip install Flask
+        - pip install pymongo
+            pymongo est nécessaire pour interagir avec MongoDB.
+        - pip install pandas
+            pandas est nécessaire pour manipuler les données.
+
+    Démarrer MongoDB avec Docker :
+        Evidemment Docker doit être en cours d'execution sur la machine.
+        Ensuite executer la commande suivante:
+        docker-compose up -d
+    Démarrer le serveur Flask:
+        Executer cette commande:
+        Python api_flask.py 
+    
+
+Utilisation de l'API
+    Endpoints Disponibles:
+        GET /api/arbres
+            Récupère tous les arbres remarquables.
+            Requête : http://localhost:5000/api/arbres
+
+        GET /api/arbres/search
+            Recherche des arbres par nom.
+            Paramètres : name (avec le nom de l'arbre à rechercher)
+            Exemple de requête : http://localhost:5000/api/arbres/search?name=chêne
+
