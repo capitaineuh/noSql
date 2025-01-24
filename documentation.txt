@@ -11,7 +11,7 @@ Etape a suivre:
 
     Cloner le Dépôt :
         git clone https://github.com/capitaineuh/noSql
-        
+
     Installer les Dépendances :
         - pip install Flask
         - pip install pymongo
@@ -39,3 +39,9 @@ Utilisation de l'API
             Paramètres : name (avec le nom de l'arbre à rechercher)
             Exemple de requête : http://localhost:5000/api/arbres/search?name=chêne
 
+Mise a jour:
+Le fichier "auto.py" automatise l'import des différents URLs renseignés. 
+Le fichier "api_flask" a été modifier pour traiter l'ensemble des ces nouvelles données.
+
+Par manque de temps, l'automatisation n'est pas entièrement fonctionnelle.
+Par contre le traitement individel de chaque url a travers les différents scripts fonctionne parfaitement.
