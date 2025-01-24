@@ -60,7 +60,7 @@ def get_streetart():
 @app.route('/api/arbres/search', methods=['GET'])
 def search_arbres():
     collection = db['arbres_remarquables']
-    name = request.args.get('nom_francais')
+    name = request.args.get('nom_fr')
     if not name:
         return jsonify({"error": "Missing search parameter 'nom_francais'"}), 400
     arbres = list(collection.find({"nom_harmonisé_1": {"$regex": name, "$options": "i"}}, {'_id': 0}))
